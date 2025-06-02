@@ -45,10 +45,9 @@ UPDATE Propietario SET telefono='1112222333' WHERE id_Propietario=1; --Andrey no
 UPDATE Mascota SET nombreMascota='Maxi' WHERE id_Mascota=1; --Andrey no puso ;
 
 SELECT 
-    Propietario.nombrePropietario AS nombre_propietario,
+    Propietario.nombrePropietario AS nombre_propietario, -- Orden de las consultas había puesto delete, select, alter, drop y truncate
     mascota.nombreMascota AS nombre_mascota,
-    cita.fechaCita,
-  
+    cita.fechaCita
 FROM 
     Propietario
 INNER JOIN Mascota ON Propietario.id_propietario = mascota.id_Propietario

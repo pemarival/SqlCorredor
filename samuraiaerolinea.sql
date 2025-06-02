@@ -31,7 +31,7 @@ FOREIGN KEY (id_Vuelo) REFERENCES Vuelo (id_Vuelo),
 FOREIGN KEY (id_Avion) REFERENCES Avion (id_Avion)
 );
 
-INSERT INTO Pasajero VALUES
+INSERT INTO Pasajero VALUES  --No insertó datos, los agregué yo
 (1,'Lucas'),
 (2,'Kevin'),
 (3,'Santiago'),
@@ -56,7 +56,7 @@ INSERT INTO Reserva VALUES
 (4,4,4,4,30); 
 
 SELECT 
-    Pasajero.nombre AS nombre_pasajero,
+    Pasajero.nombre AS nombre_pasajero, --Solo hizo el select y el from, faltó el delete, alter, truncate y drop
     Vuelo.destino,
     Avion.modelo AS modelo_avion,
     reserva.asiento
@@ -73,7 +73,7 @@ DELETE FROM Reserva WHERE id_Reserva = 3;
 
 
 ALTER TABLE Avion ADD conductor VARCHAR(50);  
-ALTER TABLE Vuelo ALTER COLUMN nombreMascota VARCHAR(100);  
+ALTER TABLE Vuelo ALTER COLUMN origen VARCHAR(50);  
 
 TRUNCATE TABLE Reserva;
  
